@@ -1,65 +1,65 @@
 ﻿---
-title: RPG Game Design Spec
+title: RPG 游戏设计文档
 date: 2026-06-08
 status: approved
 engine: Godot 4.x
 language: GDScript
 ---
 
-# RPG Game Design Specification
+# RPG 游戏设计文档
 
-## Overview
+## 概述
 
-A short-form JRPG experience (2-4 hours) built with Godot 4 and GDScript,
-driven by story, pixel-art visuals, and classic turn-based combat.
+一款短篇日式角色扮演游戏（JRPG），体验时长 2-4 小时，使用 Godot 4 和 GDScript 开发。
+以剧情为核心，像素美术风格，经典回合制战斗。
 
-## Tech Stack
+## 技术选型
 
-| Item | Choice |
-|------|--------|
-| Engine | Godot 4.x |
-| Language | GDScript |
-| Art Style | Pixel art (16x16 or 32x32 sprites) |
-| Combat | Classic turn-based |
-| Scope | Short narrative experience (2-4 hrs) |
+| 项目 | 选择 |
+|------|------|
+| 游戏引擎 | Godot 4.x |
+| 开发语言 | GDScript |
+| 美术风格 | 像素风（16x16 或 32x32 像素精灵） |
+| 战斗系统 | 经典回合制 |
+| 游戏体量 | 短篇体验（2-4 小时） |
 
-## Core Systems
+## 核心系统
 
-1. **Map System** — Tilemap-based exploration with NPC dialogue and interactive objects.
-2. **Dialogue System** — Text windows with branching dialogue choices and NPC interaction.
-3. **Turn-Based Combat** — Encounter-driven battles; players choose Attack / Magic / Item / Flee.
-4. **Character System** — 3–4 main characters with levels, HP/MP, and base stats. Switchable in battle.
-5. **Progression** — EXP gain from combat, level-up stat boosts, optional skill unlocks.
+1. **地图系统** — 基于 Tilemap 的网格地图探索，包含 NPC 对话和可交互物件。
+2. **对话系统** — 文本对话框，支持剧情文本、选项分支和 NPC 交互。
+3. **回合制战斗** — 遇敌触发战斗；玩家可选择攻击 / 魔法 / 道具 / 逃跑。
+4. **角色系统** — 3-4 名主角，各自拥有等级、HP/MP 和基础属性，战斗中可切换操控角色。
+5. **成长系统** — 击杀敌人获得经验值，升级提升属性，可选解锁新技能。
 
-## Project Structure
+## 项目结构
 
 ```
 rpg-game-1/
-├── scenes/           # Godot scenes (.tscn)
-│   ├── world/        # Map scenes
-│   ├── battle/       # Battle scene
-│   ├── ui/           # UI scenes (dialogue, menus)
-│   └── characters/   # Character scenes
-├── scripts/          # GDScript files
-│   ├── systems/      # Combat, dialogue, progression
-│   ├── entities/     # Character / Enemy base classes
-│   └── data/         # Story data, item data
-├── sprites/          # Pixel sprite sheets
-├── tiles/            # Tileset images
-├── audio/            # SFX and BGM
-└── project.godot     # Godot project config
+├── scenes/           # Godot 场景文件 (.tscn)
+│   ├── world/        # 地图场景
+│   ├── battle/       # 战斗场景
+│   ├── ui/           # UI 场景（对话框、菜单）
+│   └── characters/   # 角色场景
+├── scripts/          # GDScript 脚本
+│   ├── systems/      # 战斗系统、对话系统、成长系统
+│   ├── entities/     # 角色 / 敌人基类
+│   └── data/         # 剧情数据、物品数据
+├── sprites/          # 像素精灵图
+├── tiles/            # 地图瓦片
+├── audio/            # 音效和 BGM
+└── project.godot     # Godot 项目配置
 ```
 
-## Development Priority
+## 开发优先级
 
-1. Map walking + NPC dialogue
-2. Encounter trigger + turn-based combat skeleton
-3. Character stats + level-up system
-4. Narrative content fill-in
+1. 地图行走 + NPC 对话
+2. 遇敌触发 + 回合制战斗框架
+3. 角色属性 + 升级系统
+4. 剧情内容填充
 
-## YAGNI Notes
+## 精简原则（YAGNI）
 
-- No multiplayer, no guild system, no mini-games, no crafting.
-- Single save slot to start.
-- Visuals: placeholder pixel art is acceptable for prototype.
+- 不做多人在线、公会系统、小游戏、制作合成。
+- 初期仅支持单存档位。
+- 原型阶段使用占位像素美术即可。
 

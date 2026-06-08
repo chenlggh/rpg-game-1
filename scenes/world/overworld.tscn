@@ -1,0 +1,32 @@
+﻿; scene_type=Node2D
+; script=res://scripts/systemes/world_manager.gd
+
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/systemes/world_manager.gd" id="1_world"]
+[ext_resource type="Texture2D" path="res://tiles/grass.png" id="2_grass"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_world")
+
+[node name="TileMap" type="TileMap" parent="."]
+layers = 1
+layer_1_enabled = true
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(64, 64)
+script = ExtResource("1_player")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="TileMap"]
+shape = RectangleShape2D.new()
+_custom_shape_rect = Rect2(0, 0, 800, 600)
+
+[node name="NPC_1" type="Area2D" parent="."]
+position = Vector2(200, 100)
+
+[node name="NPC_Sprite" type="Sprite2D" parent="NPC_1"]
+offset = Vector2(16, 16)
+
+[node name="NPC_Collision" type="CollisionShape2D" parent="NPC_1"]
+shape = CircleShape2D.new()
+radius = 20.0

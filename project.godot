@@ -1,0 +1,20 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; but it can also be edited manually if you prefer.
+
+[application]
+
+config/name="RPG Game"
+run/main_scene=""
+config/features=PackedStringArray("4.2", "Standard Rendering")
+
+[display]
+
+window/size/viewport_width=800
+window/size/viewport_height=600
+window/size/mode=0
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+textures/canvas_textures/default_texture_filter=1

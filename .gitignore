@@ -1,0 +1,21 @@
+﻿# Godot auto-generated files
+.godot/
+
+# IDE
+*.tscn.bak
+*.import/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# OS - Rubeus
+*.swp
+*.swo
+*~
+
+# Godot 3 exports
+*.mrp
+
+# Compiled scripts
+*.compiled

@@ -1,7 +1,4 @@
-﻿; scene_type=Node2D
-; script=res://scripts/systemes/battle_ui.gd
-
-[gd_scene load_steps=4 format=3]
+﻿[gd_scene load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://scripts/systemes/battle_ui.gd" id="1_battle_ui"]
 [ext_resource type="Script" path="res://scripts/systemes/battle_manager.gd" id="2_battle_mgr"]
